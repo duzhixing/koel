@@ -14,11 +14,11 @@ second, we need create koel user and database.
 ```bash
 # get in mysql docker 
 docker exec -it mysql mysql -u root -p
-# create user in MySQL, '#' means all;
-create user koel@'#' identified by 'password';
+# create user in MySQL, '%' means all;
+create user koel@'%' identified by 'password';
 create database koel_database;
 # link user and database
-grant all privileges on koel_database.* to koel@'#';
+grant all privileges on koel_database.* to koel@'%';
 ```
 
 ## 2. install koel
